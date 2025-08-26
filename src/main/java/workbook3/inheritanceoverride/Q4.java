@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 class Person {
     String name;
+
     Person(String name) {
         this.name = name;
     }
+
     void introduce() {
         System.out.println("Hello, I'm " + name + ".");
     }
@@ -14,19 +16,20 @@ class Person {
 
 class Student extends Person {
     Student(String name) {
-        super(name); // super() 맛보기
+        super(name);
     }
+
     void introduce() {
-        // TODO: 학생 소개 출력
+        System.out.println("Hello, I'm " + name + " " + "student.");
     }
 }
 
 class Teacher extends Person {
     Teacher(String name) {
-        super(name); // super() 맛보기
+        super(name);
     }
     void introduce() {
-        // TODO: 교사 소개 출력
+        System.out.println("Hello, I'm " + name + " " +"teacher.");
     }
 }
 

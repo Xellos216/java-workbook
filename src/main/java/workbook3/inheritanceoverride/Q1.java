@@ -9,7 +9,7 @@ class Animal {
 
 class Dog extends Animal {
     public Dog() {
-        super.name = "Dog"; // super 키워드 맛보기
+        super.name = "Jim"; // super 키워드 맛보기
     }
     void bark() {
         System.out.println("Barking...");

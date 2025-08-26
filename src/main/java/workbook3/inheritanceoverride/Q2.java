@@ -8,13 +8,13 @@ abstract class Shape {
 
 class Circle extends Shape {
     void draw() {
-        // TODO: "Draw Circle" 출력
+        System.out.println("Draw Circle");
     }
 }
 
 class Rectangle extends Shape {
     void draw() {
-        // TODO: "Draw Rectangle" 출력
+        System.out.println("Draw Rectangle");
     }
 }
 

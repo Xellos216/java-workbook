@@ -11,8 +11,17 @@ class LibraryBook {
         this.author = author;
     }
 
-    // TODO: title getter
-    // TODO: author getter
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public String getAuthor() {
+//        return author;
+//    }
+
+    public String getInfo() {
+        return title + " " + author;
+    }
 }
 
 public class Q4 {
@@ -24,6 +33,8 @@ public class Q4 {
             String a = sc.next();
             books[i] = new LibraryBook(t, a);
         }
-        // TODO: 등록한 모든 도서들의 title, author를 출력
+        for (LibraryBook b : books) {
+            System.out.println(b.getInfo());
+        }
     }
 }

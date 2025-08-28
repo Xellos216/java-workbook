@@ -11,12 +11,16 @@ class LibraryBook {
         this.author = author;
     }
 
-    public String getTitle() {
-        return title;
-    }
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public String getAuthor() {
+//        return author;
+//    }
 
-    public String getAuthor() {
-        return author;
+    public String getInfo() {
+        return title + " " + author;
     }
 }
 
@@ -30,7 +34,7 @@ public class Q4 {
             books[i] = new LibraryBook(t, a);
         }
         for (LibraryBook b : books) {
-            System.out.println(b.getTitle() + " " + b.getAuthor());
+            System.out.println(b.getInfo());
         }
     }
 }

@@ -7,12 +7,15 @@ class Account {
     Account(int balance) {
         this.balance = balance;
     }
+
     public void deposit(int amount) {
-        // TODO: balance 증가
+        balance += amount;
     }
+
     public void withdraw(int amount) {
-        // TODO: balance 감소
+        balance -= amount;
     }
+
     public int getBalance() {
         return balance;
     }
@@ -26,6 +29,7 @@ public class Q1 {
         int amt1 = sc.nextInt();
         String cmd2 = sc.next();
         int amt2 = sc.nextInt();
+
         Account acc = new Account(bal);
         if (cmd1.equals("deposit")) {
             acc.deposit(amt1);

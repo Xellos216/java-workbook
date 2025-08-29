@@ -12,17 +12,17 @@ interface Rotatable {
 
 class Square implements Drawable, Rotatable {
     public void draw() {
-        // TODO: "Square drawn" 출력
+        System.out.println( "Square drawn");
     }
 
     public void rotate() {
-        // TODO: "Square rotated" 출력
+        System.out.println( "Square rotated");
     }
 }
 
 class Circle implements Drawable {
     public void draw() {
-        // TODO: "Circle drawn" 출력
+        System.out.println( "Circle drawn");
     }
 }
 
@@ -34,12 +34,16 @@ public class Q6 {
         Drawable d1 = t1.equals("square") ? new Square() : new Circle();
         Drawable d2 = t2.equals("square") ? new Square() : new Circle();
         d1.draw();
-        if (d1 instanceof Rotatable) { // d1이 Rotatable 인터페이스(또는 그 하위 타입)를 실제로 구현한 객체인지 확인
-            // TODO: d1 객체를 활용하여 rotate() 메서드를 호출한다.
+        if (d1 instanceof Rotatable) {
+            ((Rotatable) d1).rotate();
         }
         d2.draw();
-        if (d2 instanceof Rotatable) { // d2이 Rotatable 인터페이스(또는 그 하위 타입)를 실제로 구현한 객체인지 확인
-            // TODO: d2 객체를 활용하여 rotate() 메서드를 호출한다.
+        if (d2 instanceof Rotatable) {
+            ((Rotatable) d2).rotate();
         }
     }
 }
+
+// d2는 Drawable 타입이라 rotate()를 직접 호출할 수 없음
+// 하지만 instanceof로 Rotatable 여부를 확인 후 (Rotatable)로 캐스팅하면
+// 실제 객체가 Square일 때만 rotate() 실행, Circle일 경우는 건너뛰므로 에러가 나지 않는다.

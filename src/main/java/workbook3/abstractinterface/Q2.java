@@ -8,13 +8,13 @@ interface Playable {
 
 class Piano implements Playable {
     public void play() {
-        // TODO: "Piano plays" 출력
+        System.out.println( "Piano plays");
     }
 }
 
 class Guitar implements Playable {
     public void play() {
-        // TODO: "Guitar plays" 출력
+        System.out.println("Guitar plays");
     }
 }
 
@@ -29,3 +29,5 @@ public class Q2 {
         inst2.play();
     }
 }
+
+// 다형성 = 부모 타입 변수로 자식 객체를 참조할 수 있고, 호출되는 메서드는 실제 객체 타입에 따라 달라지는 것
